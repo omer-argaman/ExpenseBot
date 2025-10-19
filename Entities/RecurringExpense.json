@@ -1,0 +1,46 @@
+{
+  "name": "RecurringExpense",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the recurring expense (e.g., 'Rent', 'Netflix Subscription')"
+    },
+    "amount": {
+      "type": "number",
+      "description": "Amount of the recurring expense"
+    },
+    "category_id": {
+      "type": "string",
+      "description": "ID of the category this expense belongs to"
+    },
+    "category_name": {
+      "type": "string",
+      "description": "Name of the category"
+    },
+    "day_of_month": {
+      "type": "number",
+      "description": "Day of the month when this expense occurs (1-28)"
+    },
+    "household_id": {
+      "type": "string",
+      "description": "ID of the household this recurring expense belongs to"
+    },
+    "is_active": {
+      "type": "boolean",
+      "description": "Whether this recurring expense is active",
+      "default": true
+    },
+    "last_generated_month": {
+      "type": "string",
+      "description": "Last month this expense was generated (YYYY-MM format)"
+    }
+  },
+  "required": [
+    "name",
+    "amount",
+    "category_id",
+    "category_name",
+    "day_of_month"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "Category",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Category name (e.g., 'Dining Out', 'Rent', 'Gas')"
+    },
+    "umbrella_category": {
+      "type": "string",
+      "enum": [
+        "housing",
+        "transportation",
+        "daily_living",
+        "entertainment",
+        "health",
+        "savings",
+        "other"
+      ],
+      "description": "Broader category grouping"
+    },
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Keywords that trigger this category (e.g., ['dinner', 'restaurant', 'food'])"
+    },
+    "monthly_budget": {
+      "type": "number",
+      "description": "Monthly budget limit for this category"
+    },
+    "color": {
+      "type": "string",
+      "description": "Color for visual identification"
+    },
+    "icon": {
+      "type": "string",
+      "description": "Icon name for the category"
+    },
+    "household_id": {
+      "type": "string",
+      "description": "ID of the household this category belongs to"
+    }
+  },
+  "required": [
+    "name",
+    "umbrella_category"
+  ]
+}

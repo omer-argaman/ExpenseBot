@@ -1,0 +1,21 @@
+{
+  "name": "Household",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Household name (e.g., 'Smith Family', 'John & Jane')"
+    },
+    "member_emails": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of member email addresses who can access this household"
+    }
+  },
+  "required": [
+    "name",
+    "member_emails"
+  ]
+}

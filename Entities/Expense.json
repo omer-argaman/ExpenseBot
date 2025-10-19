@@ -1,0 +1,37 @@
+{
+  "name": "Expense",
+  "type": "object",
+  "properties": {
+    "amount": {
+      "type": "number",
+      "description": "Expense amount"
+    },
+    "category_id": {
+      "type": "string",
+      "description": "ID of the category this expense belongs to"
+    },
+    "category_name": {
+      "type": "string",
+      "description": "Name of the category (denormalized for performance)"
+    },
+    "note": {
+      "type": "string",
+      "description": "Optional note about the expense"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the expense occurred"
+    },
+    "household_id": {
+      "type": "string",
+      "description": "ID of the household this expense belongs to"
+    }
+  },
+  "required": [
+    "amount",
+    "category_id",
+    "category_name",
+    "date"
+  ]
+}
